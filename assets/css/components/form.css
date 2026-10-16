@@ -31,7 +31,9 @@
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius-sm);
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .form__textarea {
@@ -54,34 +56,40 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     padding: 0.75rem 1.25rem;
     font-size: var(--font-body);
     font-weight: 700;
     border-radius: var(--border-radius-sm);
     border: var(--border-width) solid var(--border-color);
-    box-shadow: var(--shadow-brutal);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+    box-shadow: 4px 4px 0px var(--border-color);
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.2s ease;
 }
 
 .button:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--shadow-color);
+    box-shadow: 6px 6px 0px var(--border-color);
+    filter: brightness(1.1);
 }
 
 .button:active {
-    transform: translate(0px, 0px);
-    box-shadow: 2px 2px 0px var(--shadow-color);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--border-color);
 }
 
 .button--primary {
-    background-color: var(--color-primary);
+    background: var(--gradient-primary);
     color: #ffffff;
 }
 
 .button--secondary {
-    background-color: var(--color-secondary);
-    color: #0f172a;
+    background: var(--gradient-secondary);
+    color: #ffffff;
 }
 
 .button--outline {
@@ -104,18 +112,23 @@
 .filter {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .filter__button {
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 0.85rem;
     font-size: var(--font-caption);
-    font-weight: 600;
+    font-weight: 700;
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius-sm);
+    background-color: transparent;
     color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .filter__button--active {
-    background-color: var(--color-primary);
+    background: var(--gradient-primary);
     color: #ffffff;
+    box-shadow: 2px 2px 0px var(--border-color);
 }
