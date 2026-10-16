@@ -5,7 +5,7 @@
     --color-accent: #a3e635;
 
     /* Tipografía */
-    --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
     --font-title: clamp(1.8rem, 4vw + 1rem, 3.2rem);
     --font-subtitle: clamp(1.25rem, 2vw + 0.8rem, 1.75rem);
     --font-body: clamp(0.95rem, 1vw + 0.5rem, 1rem);
@@ -21,7 +21,7 @@
 }
 
 /* Tema Claro */
-[data-theme='light'] {
+[data-theme="light"] {
     --bg-main: #f8fafc;
     --bg-card: rgba(255, 255, 255, 0.8);
     --bg-card-hover: rgba(255, 255, 255, 0.95);
@@ -33,7 +33,7 @@
 }
 
 /* Tema Oscuro */
-[data-theme='dark'] {
+[data-theme="dark"] {
     --bg-main: #0f172a;
     --bg-card: rgba(30, 41, 59, 0.75);
     --bg-card-hover: rgba(30, 41, 59, 0.9);
