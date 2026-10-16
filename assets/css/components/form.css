@@ -14,26 +14,25 @@
 
 .form__label {
     font-size: var(--font-caption);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--color-text);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 .form__input,
 .form__textarea {
     width: 100%;
-    padding: 0.85rem 1rem;
-    font-family: inherit;
+    padding: 0.9rem 1.1rem;
+    font-family: var(--font-main);
     font-size: var(--font-body);
     color: var(--color-text);
-    background-color: var(--bg-main);
-    border: var(--border-width) solid var(--border-color);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border: var(--border-width) solid var(--glass-border);
     border-radius: var(--border-radius-sm);
     outline: none;
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .form__textarea {
@@ -44,42 +43,44 @@
 .form__input:focus,
 .form__textarea:focus {
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-brutal);
+    box-shadow: 4px 4px 0px var(--color-primary);
 }
 
 .form__submit {
     align-self: flex-start;
 }
 
-/* Sistema de Botones Reusables */
+/* Sistema de Botones Reusables con Espaciado Garantizado */
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    padding: 0.75rem 1.25rem;
+    gap: 0.65rem;
+    padding: 0.8rem 1.4rem;
+    font-family: var(--font-main);
     font-size: var(--font-body);
-    font-weight: 700;
+    font-weight: 800;
     border-radius: var(--border-radius-sm);
-    border: var(--border-width) solid var(--border-color);
-    box-shadow: 4px 4px 0px var(--border-color);
+    border: var(--border-width) solid var(--shadow-color);
+    box-shadow: 4px 4px 0px var(--shadow-color);
     cursor: pointer;
     text-decoration: none;
     transition:
         transform 0.15s ease,
         box-shadow 0.15s ease,
         filter 0.2s ease;
+    flex-shrink: 0;
 }
 
 .button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--border-color);
-    filter: brightness(1.1);
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--shadow-color);
+    filter: brightness(1.15);
 }
 
 .button:active {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px var(--border-color);
+    box-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 .button--primary {
@@ -93,35 +94,43 @@
 }
 
 .button--outline {
-    background-color: transparent;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     color: var(--color-text);
+    border-color: var(--glass-border);
 }
 
 .button--icon {
-    padding: 0.6rem;
+    width: 46px;
+    height: 46px;
+    padding: 0;
     border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button__icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.35rem;
+    height: 1.35rem;
     fill: currentColor;
 }
 
 /* Filtros de proyectos */
 .filter {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
 }
 
 .filter__button {
-    padding: 0.4rem 0.85rem;
+    padding: 0.45rem 0.9rem;
+    font-family: var(--font-main);
     font-size: var(--font-caption);
-    font-weight: 700;
-    border: var(--border-width) solid var(--border-color);
+    font-weight: 800;
+    border: var(--border-width) solid var(--shadow-color);
     border-radius: var(--border-radius-sm);
-    background-color: transparent;
+    background: transparent;
     color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -130,5 +139,5 @@
 .filter__button--active {
     background: var(--gradient-primary);
     color: #ffffff;
-    box-shadow: 2px 2px 0px var(--border-color);
+    box-shadow: 3px 3px 0px var(--shadow-color);
 }
