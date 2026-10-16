@@ -1,0 +1,144 @@
+/* Tarjeta Base Híbrida (Glassmorphism + Neobrutalismo) */
+.card {
+    background-color: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-brutal);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    background-color: var(--bg-card-hover);
+}
+
+/* Tipografía de Tarjetas */
+.card__title {
+    font-size: var(--font-title);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-text);
+}
+
+.card__subtitle {
+    font-size: var(--font-subtitle);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.card__description {
+    font-size: var(--font-body);
+    color: var(--color-text-muted);
+}
+
+/* Badges y Tags */
+.badge,
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-caption);
+    font-weight: 600;
+    border: var(--border-width) solid var(--border-color);
+}
+
+.badge--primary {
+    background-color: var(--color-accent);
+    color: #0f172a;
+}
+
+.tag {
+    background-color: rgba(99, 102, 241, 0.15);
+    color: var(--color-text);
+}
+
+.tag--learning {
+    background-color: rgba(6, 182, 212, 0.15);
+    border-style: dashed;
+}
+
+.tag--sm {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Grupos de Stack */
+.stack-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stack-group__title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+}
+
+.stack-group__list,
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Métricas / Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.stats__number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+}
+
+.stats__label {
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+/* Rejilla de Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    padding: 1.25rem;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-card__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
