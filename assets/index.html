@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Jose Guillermo Rodriguez Samcam</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Portafolio | Técnico en Desarrollo de Software</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components/header.css">
+    <link rel="stylesheet" href="./assets/css/components/bento.css">
+    <link rel="stylesheet" href="./assets/css/components/cards.css">
+    <link rel="stylesheet" href="./assets/css/components/form.css">
 </head>
 <body class="page">
 
@@ -14,7 +18,9 @@
         </a>
         <nav class="nav">
             <button class="button button--icon" id="theme-toggle" aria-label="Cambiar tema">
-                <svg class="button__icon"><!-- Icono SVG --></svg>
+                <svg class="button__icon" viewBox="0 0 24 24">
+                    <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
             </button>
             <button class="button button--text" id="lang-toggle" aria-label="Cambiar idioma">
                 <span class="button__label">EN</span>
@@ -27,29 +33,33 @@
         <!-- Card 1: Hero -->
         <section class="card card--hero bento__item--hero">
             <header class="card__header">
-                <span class="badge badge--primary">Disponible para trabajar</span>
-                <h1 class="card__title">Técnico en Desarrollo de Software</h1>
+                <span class="badge badge--primary" data-i18n="heroTag">Disponible para trabajar</span>
+                <h1 class="card__title" data-i18n="heroRole">Técnico en Desarrollo de Software</h1>
             </header>
-            <p class="card__description">
+            <p class="card__description" data-i18n="heroDesc">
                 Apasionado por construir soluciones web eficientes, limpias y escalables. Enfocado en aprendizaje continuo y buenas prácticas de código.
             </p>
             <footer class="card__footer">
-                <a href="#contacto" class="button button--primary">Contáctame</a>
+                <a href="#contacto" class="button button--primary" data-i18n="heroCta">Contáctame</a>
                 <a href="https://github.com" target="_blank" class="button button--outline" aria-label="Perfil de GitHub">
-                    <svg class="button__icon"><!-- Icono GitHub --></svg>
+                    <svg class="button__icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill="currentColor"/>
+                    </svg>
                 </a>
                 <a href="https://linkedin.com" target="_blank" class="button button--outline" aria-label="Perfil de LinkedIn">
-                    <svg class="button__icon"><!-- Icono LinkedIn --></svg>
+                    <svg class="button__icon" viewBox="0 0 24 24">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="currentColor"/>
+                    </svg>
                 </a>
             </footer>
         </section>
 
         <!-- Card 2: Stack Tecnológico -->
         <article class="card card--stack bento__item--stack">
-            <h2 class="card__subtitle">Stack Tecnológico</h2>
+            <h2 class="card__subtitle" data-i18n="stackTitle">Stack Tecnológico</h2>
             
             <section class="stack-group">
-                <h3 class="stack-group__title">Dominados</h3>
+                <h3 class="stack-group__title" data-i18n="stackMastered">Dominados</h3>
                 <ul class="stack-group__list">
                     <li class="tag">NodeJS</li>
                     <li class="tag">ExpressJS</li>
@@ -66,7 +76,7 @@
             </section>
 
             <section class="stack-group">
-                <h3 class="stack-group__title">En aprendizaje</h3>
+                <h3 class="stack-group__title" data-i18n="stackLearning">En aprendizaje</h3>
                 <ul class="stack-group__list">
                     <li class="tag tag--learning">React</li>
                     <li class="tag tag--learning">TypeScript</li>
@@ -77,15 +87,15 @@
 
         <!-- Card 3: Métricas -->
         <article class="card card--stats bento__item--stats">
-            <h2 class="card__subtitle">Trayectoria</h2>
+            <h2 class="card__subtitle" data-i18n="statsTitle">Trayectoria</h2>
             <ul class="stats">
                 <li class="stats__item">
                     <strong class="stats__number">+10</strong>
-                    <span class="stats__label">Proyectos creados</span>
+                    <span class="stats__label" data-i18n="statsProjects">Proyectos creados</span>
                 </li>
                 <li class="stats__item">
                     <strong class="stats__number">100%</strong>
-                    <span class="stats__label">Compromiso</span>
+                    <span class="stats__label" data-i18n="statsCommitment">Compromiso</span>
                 </li>
             </ul>
         </article>
@@ -93,7 +103,7 @@
         <!-- Card 4: Proyectos Destacados -->
         <section class="card card--projects bento__item--projects">
             <header class="card__header">
-                <h2 class="card__subtitle">Proyectos Destacados</h2>
+                <h2 class="card__subtitle" data-i18n="projectsTitle">Proyectos Destacados</h2>
                 <nav class="filter" aria-label="Filtro de proyectos">
                     <button class="filter__button filter__button--active" data-filter="all">Todos</button>
                     <button class="filter__button" data-filter="backend">Backend</button>
@@ -103,16 +113,19 @@
 
             <div class="projects-grid">
                 <article class="project-card" data-category="backend">
-                    <h3 class="project-card__title">Nombre Proyecto</h3>
+                    <h3 class="project-card__title">Inventario Gamer API</h3>
                     <p class="project-card__description">
-                        Descripción breve del proyecto enfocada en la arquitectura, consumo de API y almacenamiento de datos.
+                        Backend para gestión de inventarios construido con arquitectura por capas, validaciones y persistencia en base de datos no relacional.
                     </p>
                     <ul class="project-card__tags">
                         <li class="tag tag--sm">NodeJS</li>
+                        <li class="tag tag--sm">ExpressJS</li>
                         <li class="tag tag--sm">MongoDB</li>
                     </ul>
                     <a href="https://github.com" target="_blank" class="button button--secondary">
-                        <svg class="button__icon"><!-- Icono GitHub --></svg>
+                        <svg class="button__icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill="currentColor"/>
+                        </svg>
                         <span class="button__label">Repositorio</span>
                     </a>
                 </article>
@@ -121,21 +134,21 @@
 
         <!-- Card 5: Formulario de Contacto -->
         <section class="card card--contact bento__item--contact" id="contacto">
-            <h2 class="card__subtitle">Envíame un mensaje</h2>
+            <h2 class="card__subtitle" data-i18n="contactTitle">Envíame un mensaje</h2>
             <form class="form">
                 <label class="form__field">
-                    <span class="form__label">Nombre</span>
+                    <span class="form__label" data-i18n="contactName">Nombre</span>
                     <input type="text" class="form__input" name="name" required placeholder="Tu nombre">
                 </label>
                 <label class="form__field">
-                    <span class="form__label">Correo</span>
+                    <span class="form__label" data-i18n="contactEmail">Correo</span>
                     <input type="email" class="form__input" name="email" required placeholder="tu@email.com">
                 </label>
                 <label class="form__field">
-                    <span class="form__label">Mensaje</span>
+                    <span class="form__label" data-i18n="contactMessage">Mensaje</span>
                     <textarea class="form__textarea" name="message" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea>
                 </label>
-                <button type="submit" class="button button--primary form__submit">Enviar Mensaje</button>
+                <button type="submit" class="button button--primary form__submit" data-i18n="contactSubmit">Enviar Mensaje</button>
             </form>
         </section>
 
@@ -145,5 +158,6 @@
         <p class="footer__text">&copy; 2026 - Desarrollado con HTML, CSS y TypeScript.</p>
     </footer>
 
+    <script type="module" src="./assets/js/main.ts"></script>
 </body>
 </html>
