@@ -1,4 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
+    /* Tipografía */
+    --font-main:
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Tamaño de fuente fluido con clamp() */
+    --font-title: clamp(2rem, 4vw + 1rem, 3.25rem);
+    --font-subtitle: clamp(1.25rem, 2vw + 0.8rem, 1.85rem);
+    --font-body: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
+    --font-caption: 0.85rem;
+
     /* Colores Neón Base */
     --color-primary: #6366f1;
     --color-secondary: #06b6d4;
@@ -11,52 +23,47 @@
             #d946ef 100%);
     --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
     --gradient-accent: linear-gradient(135deg, #a3e635 0%, #10b981 100%);
-    --gradient-card-dark: linear-gradient(145deg,
-            rgba(30, 41, 59, 0.7) 0%,
-            rgba(15, 23, 42, 0.85) 100%);
-    --gradient-card-light: linear-gradient(145deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(241, 245, 249, 0.75) 100%);
 
-    /* Neobrutalismo */
-    --border-width: 3px;
-    --border-color: #0f172a;
-    --border-radius: 20px;
-    --border-radius-sm: 12px;
-
-    /* Sombras e Iluminación */
-    --shadow-brutal: 5px 5px 0px var(--border-color);
-    --glass-blur: blur(16px);
+    /* Neobrutalismo Híbrido */
+    --border-width: 2.5px;
+    --border-radius: 24px;
+    --border-radius-sm: 14px;
 }
 
-/* Tema Oscuro (Predeterminado) */
+/* Tema Oscuro Cyber-Glass */
 [data-theme="dark"] {
-    --bg-main: #090d16;
-    --bg-body-gradient: radial-gradient(circle at 50% 0%,
-            #1e1b4b 0%,
-            #090d16 70%);
-    --bg-card: var(--gradient-card-dark);
-    --bg-card-hover: linear-gradient(145deg,
-            rgba(40, 53, 78, 0.8) 0%,
-            rgba(15, 23, 42, 0.95) 100%);
+    --bg-main: #060913;
     --color-text: #f8fafc;
     --color-text-muted: #94a3b8;
-    --border-color: #334155;
+    --border-color: rgba(255, 255, 255, 0.18);
     --shadow-color: #000000;
+
+    /* Cristal Cyber */
+    --glass-bg: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07) 0%,
+            rgba(255, 255, 255, 0.02) 100%);
+    --glass-bg-hover: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0.04) 100%);
+    --glass-border: rgba(255, 255, 255, 0.22);
+    --neon-glow: rgba(99, 102, 241, 0.35);
 }
 
-/* Tema Claro */
+/* Tema Claro Cyber-Glass */
 [data-theme="light"] {
-    --bg-main: #f8fafc;
-    --bg-body-gradient: radial-gradient(circle at 50% 0%,
-            #e0e7ff 0%,
-            #f8fafc 70%);
-    --bg-card: var(--gradient-card-light);
-    --bg-card-hover: linear-gradient(145deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(226, 232, 240, 0.9) 100%);
+    --bg-main: #f0f4f8;
     --color-text: #0f172a;
     --color-text-muted: #475569;
     --border-color: #0f172a;
     --shadow-color: #0f172a;
+
+    /* Cristal Light */
+    --glass-bg: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.7) 0%,
+            rgba(255, 255, 255, 0.4) 100%);
+    --glass-bg-hover: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.85) 0%,
+            rgba(255, 255, 255, 0.6) 100%);
+    --glass-border: rgba(15, 23, 42, 0.3);
+    --neon-glow: rgba(99, 102, 241, 0.2);
 }
