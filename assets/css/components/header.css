@@ -1,0 +1,38 @@
+/* Cabecera Principal */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-brutal);
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header__logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+/* Navegación y Controles */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Pie de página */
+.footer {
+    margin-top: auto;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+}
