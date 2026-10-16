@@ -9,57 +9,20 @@
   padding: 1rem;
 }
 
-/* Distribución Asimétrica en Escritorio (12 Columnas) */
-.bento__item--hero {
-  grid-column: span 7;
-}
-
-.bento__item--stack {
-  grid-column: span 5;
-}
-
-.bento__item--stats {
-  grid-column: span 4;
-}
-
-.bento__item--projects {
-  grid-column: span 8;
-}
-
+/* Fila completa (12 columnas) para cada sección principal */
+.bento__item--hero,
+.bento__item--stack,
+.bento__item--stats,
+.bento__item--projects,
 .bento__item--contact {
   grid-column: span 12;
 }
 
-/* Adaptación a Laptops / Tablets Horizontales (Menos de 1024px) */
-@media (max-width: 1024px) {
-  .bento__item--hero,
-  .bento__item--projects {
-    grid-column: span 12;
-  }
-
-  .bento__item--stack {
-    grid-column: span 7;
-  }
-
-  .bento__item--stats {
-    grid-column: span 5;
-  }
-}
-
-/* Adaptación a Tablets Verticales y Móviles (Menos de 768px) */
 @media (max-width: 768px) {
   .bento {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     padding: 0.5rem;
-  }
-
-  .bento__item--hero,
-  .bento__item--stack,
-  .bento__item--stats,
-  .bento__item--projects,
-  .bento__item--contact {
-    width: 100%;
   }
 }
