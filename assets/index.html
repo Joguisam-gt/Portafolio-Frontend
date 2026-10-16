@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Jose Guillermo Rodriguez Samcam</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <a href="#" class="header__logo">
+            <span class="header__logo-text">Dev</span>
+        </a>
+        <nav class="nav">
+            <button class="button button--icon" id="theme-toggle" aria-label="Cambiar tema">
+                <svg class="button__icon"><!-- Icono SVG --></svg>
+            </button>
+            <button class="button button--text" id="lang-toggle" aria-label="Cambiar idioma">
+                <span class="button__label">EN</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="bento">
+
+        <!-- Card 1: Hero -->
+        <section class="card card--hero bento__item--hero">
+            <header class="card__header">
+                <span class="badge badge--primary">Disponible para trabajar</span>
+                <h1 class="card__title">Técnico en Desarrollo de Software</h1>
+            </header>
+            <p class="card__description">
+                Apasionado por construir soluciones web eficientes, limpias y escalables. Enfocado en aprendizaje continuo y buenas prácticas de código.
+            </p>
+            <footer class="card__footer">
+                <a href="#contacto" class="button button--primary">Contáctame</a>
+                <a href="https://github.com" target="_blank" class="button button--outline" aria-label="Perfil de GitHub">
+                    <svg class="button__icon"><!-- Icono GitHub --></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="button button--outline" aria-label="Perfil de LinkedIn">
+                    <svg class="button__icon"><!-- Icono LinkedIn --></svg>
+                </a>
+            </footer>
+        </section>
+
+        <!-- Card 2: Stack Tecnológico -->
+        <article class="card card--stack bento__item--stack">
+            <h2 class="card__subtitle">Stack Tecnológico</h2>
+            
+            <section class="stack-group">
+                <h3 class="stack-group__title">Dominados</h3>
+                <ul class="stack-group__list">
+                    <li class="tag">NodeJS</li>
+                    <li class="tag">ExpressJS</li>
+                    <li class="tag">Git</li>
+                    <li class="tag">N8N</li>
+                    <li class="tag">Docker</li>
+                    <li class="tag">HTML</li>
+                    <li class="tag">CSS</li>
+                    <li class="tag">JavaScript</li>
+                    <li class="tag">PostgreSQL</li>
+                    <li class="tag">MongoDB</li>
+                    <li class="tag">MySQL</li>
+                </ul>
+            </section>
+
+            <section class="stack-group">
+                <h3 class="stack-group__title">En aprendizaje</h3>
+                <ul class="stack-group__list">
+                    <li class="tag tag--learning">React</li>
+                    <li class="tag tag--learning">TypeScript</li>
+                    <li class="tag tag--learning">TailwindCSS</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- Card 3: Métricas -->
+        <article class="card card--stats bento__item--stats">
+            <h2 class="card__subtitle">Trayectoria</h2>
+            <ul class="stats">
+                <li class="stats__item">
+                    <strong class="stats__number">+10</strong>
+                    <span class="stats__label">Proyectos creados</span>
+                </li>
+                <li class="stats__item">
+                    <strong class="stats__number">100%</strong>
+                    <span class="stats__label">Compromiso</span>
+                </li>
+            </ul>
+        </article>
+
+        <!-- Card 4: Proyectos Destacados -->
+        <section class="card card--projects bento__item--projects">
+            <header class="card__header">
+                <h2 class="card__subtitle">Proyectos Destacados</h2>
+                <nav class="filter" aria-label="Filtro de proyectos">
+                    <button class="filter__button filter__button--active" data-filter="all">Todos</button>
+                    <button class="filter__button" data-filter="backend">Backend</button>
+                    <button class="filter__button" data-filter="frontend">Frontend</button>
+                </nav>
+            </header>
+
+            <div class="projects-grid">
+                <article class="project-card" data-category="backend">
+                    <h3 class="project-card__title">Nombre Proyecto</h3>
+                    <p class="project-card__description">
+                        Descripción breve del proyecto enfocada en la arquitectura, consumo de API y almacenamiento de datos.
+                    </p>
+                    <ul class="project-card__tags">
+                        <li class="tag tag--sm">NodeJS</li>
+                        <li class="tag tag--sm">MongoDB</li>
+                    </ul>
+                    <a href="https://github.com" target="_blank" class="button button--secondary">
+                        <svg class="button__icon"><!-- Icono GitHub --></svg>
+                        <span class="button__label">Repositorio</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Card 5: Formulario de Contacto -->
+        <section class="card card--contact bento__item--contact" id="contacto">
+            <h2 class="card__subtitle">Envíame un mensaje</h2>
+            <form class="form">
+                <label class="form__field">
+                    <span class="form__label">Nombre</span>
+                    <input type="text" class="form__input" name="name" required placeholder="Tu nombre">
+                </label>
+                <label class="form__field">
+                    <span class="form__label">Correo</span>
+                    <input type="email" class="form__input" name="email" required placeholder="tu@email.com">
+                </label>
+                <label class="form__field">
+                    <span class="form__label">Mensaje</span>
+                    <textarea class="form__textarea" name="message" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea>
+                </label>
+                <button type="submit" class="button button--primary form__submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 - Desarrollado con HTML, CSS y TypeScript.</p>
+    </footer>
+
+</body>
+</html>
