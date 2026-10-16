@@ -1,69 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-    /* Tipografía */
-    --font-main:
-        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Tipografía */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title: clamp(2rem, 3vw + 1rem, 2.75rem);
+  --font-subtitle: clamp(1.2rem, 1.5vw + 0.5rem, 1.5rem);
+  --font-body: 0.98rem;
+  --font-caption: 0.85rem;
 
-    /* Tamaño de fuente fluido con clamp() */
-    --font-title: clamp(2rem, 4vw + 1rem, 3.25rem);
-    --font-subtitle: clamp(1.25rem, 2vw + 0.8rem, 1.85rem);
-    --font-body: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
-    --font-caption: 0.85rem;
+  /* Fondo Estático y Tarjetas Sólidas */
+  --bg-main: #0b1120;
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
 
-    /* Colores Neón Base */
-    --color-primary: #6366f1;
-    --color-secondary: #06b6d4;
-    --color-accent: #a3e635;
+  /* Textos Sólidos de Alto Contraste */
+  --color-text: #ffffff;
+  --color-text-muted: #94a3b8;
+  --color-accent-text: #38bdf8; /* Cian sólido profesional */
 
-    /* Degradados Dinámicos */
-    --gradient-primary: linear-gradient(135deg,
-            #6366f1 0%,
-            #8b5cf6 50%,
-            #d946ef 100%);
-    --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-    --gradient-accent: linear-gradient(135deg, #a3e635 0%, #10b981 100%);
+  /* Bordes y Estructura */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-active: rgba(56, 189, 248, 0.4);
+  --border-radius: 16px;
+  --border-radius-sm: 10px;
 
-    /* Neobrutalismo Híbrido */
-    --border-width: 2.5px;
-    --border-radius: 24px;
-    --border-radius-sm: 14px;
+  /* Degradados Reservados Exclusivamente para Botones */
+  --btn-gradient-primary: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  --btn-gradient-danger: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  --btn-gradient-hover: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+
+  /* Sombras de Elevación */
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --accent-glow: 0 0 20px rgba(56, 189, 248, 0.12);
 }
 
-/* Tema Oscuro Cyber-Glass */
-[data-theme="dark"] {
-    --bg-main: #060913;
-    --color-text: #f8fafc;
-    --color-text-muted: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.18);
-    --shadow-color: #000000;
-
-    /* Cristal Cyber */
-    --glass-bg: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.07) 0%,
-            rgba(255, 255, 255, 0.02) 100%);
-    --glass-bg-hover: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.12) 0%,
-            rgba(255, 255, 255, 0.04) 100%);
-    --glass-border: rgba(255, 255, 255, 0.22);
-    --neon-glow: rgba(99, 102, 241, 0.35);
-}
-
-/* Tema Claro Cyber-Glass */
+/* Tema Claro */
 [data-theme="light"] {
-    --bg-main: #f0f4f8;
-    --color-text: #0f172a;
-    --color-text-muted: #475569;
-    --border-color: #0f172a;
-    --shadow-color: #0f172a;
-
-    /* Cristal Light */
-    --glass-bg: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.7) 0%,
-            rgba(255, 255, 255, 0.4) 100%);
-    --glass-bg-hover: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.85) 0%,
-            rgba(255, 255, 255, 0.6) 100%);
-    --glass-border: rgba(15, 23, 42, 0.3);
-    --neon-glow: rgba(99, 102, 241, 0.2);
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-accent-text: #0284c7;
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-color-active: rgba(2, 132, 199, 0.4);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
 }
