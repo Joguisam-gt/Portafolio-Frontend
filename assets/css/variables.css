@@ -1,0 +1,45 @@
+:root {
+    /* Paleta Neón Única */
+    --color-primary: #6366f1;
+    --color-secondary: #06b6d4;
+    --color-accent: #a3e635;
+
+    /* Tipografía */
+    --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-title: clamp(1.8rem, 4vw + 1rem, 3.2rem);
+    --font-subtitle: clamp(1.25rem, 2vw + 0.8rem, 1.75rem);
+    --font-body: clamp(0.95rem, 1vw + 0.5rem, 1rem);
+    --font-caption: 0.85rem;
+
+    /* Neobrutalismo */
+    --border-width: 2px;
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
+
+    /* Glassmorphism */
+    --glass-blur: blur(12px);
+}
+
+/* Tema Claro */
+[data-theme='light'] {
+    --bg-main: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --bg-card-hover: rgba(255, 255, 255, 0.95);
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --border-color: #0f172a;
+    --shadow-color: #0f172a;
+    --shadow-brutal: 4px 4px 0px var(--shadow-color);
+}
+
+/* Tema Oscuro */
+[data-theme='dark'] {
+    --bg-main: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.75);
+    --bg-card-hover: rgba(30, 41, 59, 0.9);
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --border-color: #334155;
+    --shadow-color: #020617;
+    --shadow-brutal: 4px 4px 0px var(--shadow-color);
+}
