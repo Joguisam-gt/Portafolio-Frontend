@@ -1,64 +1,65 @@
 /* Rejilla Principal Bento Grid */
 .bento {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* Distribución en Monitores / Escritorio (12 Columnas) */
+/* Distribución Asimétrica en Escritorio (12 Columnas) */
 .bento__item--hero {
-    grid-column: span 8;
-    grid-row: span 2;
+  grid-column: span 7;
 }
 
 .bento__item--stack {
-    grid-column: span 4;
-    grid-row: span 2;
+  grid-column: span 5;
 }
 
 .bento__item--stats {
-    grid-column: span 4;
+  grid-column: span 4;
 }
 
 .bento__item--projects {
-    grid-column: span 8;
+  grid-column: span 8;
 }
 
 .bento__item--contact {
-    grid-column: span 12;
+  grid-column: span 12;
 }
 
-/* Adaptación a Tablets (Menos de 1024px) */
+/* Adaptación a Laptops / Tablets Horizontales (Menos de 1024px) */
 @media (max-width: 1024px) {
+  .bento__item--hero,
+  .bento__item--projects {
+    grid-column: span 12;
+  }
 
-    .bento__item--hero,
-    .bento__item--projects {
-        grid-column: span 12;
-    }
+  .bento__item--stack {
+    grid-column: span 7;
+  }
 
-    .bento__item--stack {
-        grid-column: span 7;
-    }
-
-    .bento__item--stats {
-        grid-column: span 5;
-    }
+  .bento__item--stats {
+    grid-column: span 5;
+  }
 }
 
-/* Adaptación a Móviles (Menos de 640px) */
-@media (max-width: 640px) {
-    .bento {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+/* Adaptación a Tablets Verticales y Móviles (Menos de 768px) */
+@media (max-width: 768px) {
+  .bento {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0.5rem;
+  }
 
-    .bento__item--hero,
-    .bento__item--stack,
-    .bento__item--stats,
-    .bento__item--projects,
-    .bento__item--contact {
-        width: 100%;
-    }
+  .bento__item--hero,
+  .bento__item--stack,
+  .bento__item--stats,
+  .bento__item--projects,
+  .bento__item--contact {
+    width: 100%;
+  }
 }
